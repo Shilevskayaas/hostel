@@ -1,0 +1,257 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body
+{
+	font-family: Helvetica, Tahoma, Arial;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+header
+{
+	background-color: bisque;
+	height: 190px;
+	border: 3px solid brown;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+/*Логотип*/
+header > img
+{
+	position: absolute;
+	top: 17px;
+	left: 93px;
+	border: 2px solid green;
+	border-radius: 10px;
+	width: 100px;
+	height: 100px;
+	-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+	transition: 0.6s ease-out;
+}
+header > img:hover
+{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(-15deg);
+}
+/*Пункты меню*/
+nav, nav ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav
+{
+	height: 25px;
+	padding-left: 6%;
+	padding-top: 12px;
+	min-width: 470px;
+}
+nav li
+{
+	float: left;
+	position: relative;
+	height: 100%;
+	padding: 15.2px;
+	border: 2px solid brown;
+	border-radius: 10px;
+}
+
+nav li a
+{
+	display: block;
+	width: 100%;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	color: green;
+
+}
+
+nav li ul
+{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	
+}
+nav li ul li{
+	width: 100%;
+}
+nav li:hover ul
+{
+	display: block;
+}
+nav li{
+	background: white;
+	font-weight: bold;
+}
+li:hover{
+	background: silver;
+}
+/*Контентная область*/
+main
+{
+	background-color: rgba(0, 255, 0, .3);
+}
+h1
+{
+	color: brown;
+	font-size: 70px;
+	padding: 20px;
+}
+h2
+{
+	color: red;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+h3
+{
+	color: orange;
+	font-weight: normal;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+h4{
+	color: orange;
+	font-weight: normal;
+	margin-bottom: 4px;
+}
+main > section:first-child > article
+{
+	position: relative;
+}
+.slide
+{
+	width: 400px;
+    height: 300px;
+    border: 2px solid black;
+	 border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slide  input
+{
+    display: none;
+}
+
+.slide  input + label
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: rgba(90, 90, 90, 0.8);
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+    margin-right: 4px;
+    top: 90%;
+    transition: background 0.8s ease-out 0s;
+}
+.slide  input + label:hover
+{
+background: rgba(250, 250, 250, 0.8);
+}
+.slide  input:checked + label
+{
+background: rgba(220, 220, 220, 0.8);
+}
+.slide  div
+{
+	position: absolute;
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+}
+.slide  div
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+img
+{
+    width:400px;
+	height:300px;
+	border-radius: 10px;
+}
+.slide  input:checked + label + div
+{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+.slide  div  p
+{
+    position: absolute;
+	font-size:18px;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    color: #fff;
+
+}
+.transform{
+	width:400px;
+	height:300px;
+	margin: 10px;
+	padding: 5px;
+	border: 2px solid black;
+	transition: 1s;
+	-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+	transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.transform:hover{
+	-webkit-transform: rotate(360deg);
+	transform: scale(2.2);
+}
+form, form div
+{
+	position: absolute;
+	top: 58px;
+	right: 93px;
+	display: table;
+	width: 20%;
+	border: 2px solid green;
+	border-radius: 10px;
+	background-color: #e2ceb5;
+	text-align: center;
+}
+footer
+{
+	background-color: green;
+	text-align: center;
+	padding: 5px;
+	border: 3px solid darkgreen;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.button{
+	padding: 10px;
+	background: bisque;
+	font-size: 25px;
+	border: 4px solid brown;
+	border-radius: 10px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+.button:hover{
+	background: orange;
+}
+footer p{
+	font-size: 15px;
+}
